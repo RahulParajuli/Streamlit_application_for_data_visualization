@@ -105,7 +105,7 @@ class three_features:
 
 def st_data_visualization():
     # original saved database -> test.csv
-    df = pd.read_csv("application/data-visualization-streamlit-app/temp_data/test.csv")
+    df = pd.read_csv("temp_data/test.csv")
     # for code testing -> 5000_sales_records.csv
     # df = pd.read_csv("temp_data/5000_sales_records.csv")
     column_list = df.columns.values.tolist()

@@ -188,7 +188,7 @@ class missing_df:
     self.dataset = dataset
 
 def handle_missing_value():
-    df = pd.read_csv("application/data-visualization-streamlit-app/temp_data/test.csv")
+    df = pd.read_csv("temp_data/test.csv")
     missing_count = df.isnull().sum().sum()
     if missing_count != 0:
         print(f"Found total of {missing_count} missing values.")

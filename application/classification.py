@@ -53,7 +53,7 @@ class classification:
         from sklearn.linear_model import LogisticRegression
         lr_classifier = LogisticRegression()
         lr_classifier.fit(self.X_train, self.y_train)
-        joblib.dump(lr_classifier, "application/data-visualization-streamlit-app/model/lr.sav")
+        joblib.dump(lr_classifier, "model/lr.sav")
         y_pred = lr_classifier.predict(self.X_test)
 
         st.write("\n")
@@ -75,7 +75,7 @@ class classification:
         from sklearn.neighbors import KNeighborsClassifier
         knn_classifier = KNeighborsClassifier()
         knn_classifier.fit(self.X_train, self.y_train)
-        joblib.dump(knn_classifier, "application/data-visualization-streamlit-app/model/knn.sav")
+        joblib.dump(knn_classifier, "model/knn.sav")
         y_pred = knn_classifier.predict(self.X_test)
         
         st.write("\n")
@@ -98,7 +98,7 @@ class classification:
         from sklearn.svm import SVC
         svm_classifier = SVC(kernel = kernel_type)
         svm_classifier.fit(self.X_train, self.y_train)
-        joblib.dump(svm_classifier, "application/data-visualization-streamlit-app/model/svm.sav")
+        joblib.dump(svm_classifier, "model/svm.sav")
         y_pred = svm_classifier.predict(self.X_test)
         
         st.write("\n")
@@ -120,7 +120,7 @@ class classification:
         from sklearn.naive_bayes import GaussianNB
         nb_classifier = GaussianNB()
         nb_classifier.fit(self.X_train, self.y_train)
-        joblib.dump(nb_classifier, "application/data-visualization-streamlit-app/model/nb.sav")
+        joblib.dump(nb_classifier, "model/nb.sav")
         y_pred = nb_classifier.predict(self.X_test)
         
         st.write("\n")
@@ -143,7 +143,7 @@ class classification:
         from sklearn.tree import DecisionTreeClassifier
         tree_classifier = DecisionTreeClassifier()
         tree_classifier.fit(self.X_train, self.y_train)
-        joblib.dump(tree_classifier, "application/data-visualization-streamlit-app/model/tree.sav")
+        joblib.dump(tree_classifier, "model/tree.sav")
         y_pred = tree_classifier.predict(self.X_test)
         
         st.write("\n")
@@ -163,7 +163,7 @@ class classification:
         from sklearn.ensemble import RandomForestClassifier
         rf_classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy')
         rf_classifier.fit(self.X_train, self.y_train)
-        joblib.dump(rf_classifier, "application/data-visualization-streamlit-app/model/rf-model.pkl")
+        joblib.dump(rf_classifier, "model/rf-model.pkl")
         y_pred = rf_classifier.predict(self.X_test)
         
         st.write("\n")
@@ -181,7 +181,7 @@ class classification:
         
 # primary App interfacing function for classification
 def st_classification():
-    df = pd.read_csv("application/data-visualization-streamlit-app/temp_data/test.csv")
+    df = pd.read_csv("temp_data/test.csv")
 
     # select features/columns
     col_names = []

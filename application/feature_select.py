@@ -52,7 +52,7 @@ def xgboost(X,Y,col_names):
 
 # primary interface for the App
 def st_feature_selection():
-    df = pd.read_csv("application/data-visualization-streamlit-app/temp_data/test.csv")
+    df = pd.read_csv("temp_data/test.csv")
     # drop object/string containing columns
     df_without_obj = df.select_dtypes(exclude=['object'])
     # add the label column once again
