@@ -7,3 +7,5 @@ This is automatic data visualization app which handles null value and give you a
 
 You can access a <b>demo</b> page by clicking in the following link -
 https://huggingface.co/spaces/TBF/AutomaticDatavisualization
+
+<p> Leave a star if you like the application.</p>
